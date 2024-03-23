@@ -1,12 +1,23 @@
 body {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.title {
-    margin: 50px;
+.btn_gridSize {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #8fa3a1;
+    background-color: #8fa3a1;
+    color: #ffffff;
+}
+
+.btn_gridSize:hover {
+    background-color: #ffffff;
+    color: #8fa3a1;
 }
 
 .grid {
@@ -14,15 +25,15 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid gray;
-    background-color: gray;
+    border: 1px solid #8fa3a1 ;
+    background-color: #8fa3a1 ;
     gap: 1px;
 }
 
 .row {
     display: flex;
     justify-content: space-evenly;
-    background-color: gray;
+    background-color: #8fa3a1 ;
     gap: 1px;
 }
 
