@@ -1,4 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .title {
-    text-align: center;
     margin: 50px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid gray;
+    background-color: gray;
+    gap: 1px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: gray;
+    gap: 1px;
+}
+
+.box {
+    background-color: white;
 }
