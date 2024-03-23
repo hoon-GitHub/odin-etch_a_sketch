@@ -6,13 +6,22 @@ body {
     align-items: center;
 }
 
+.heading {
+    margin: 10px;
+}
+
 .btn_gridSize, .btn_clear {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #8fa3a1;
     background-color: #8fa3a1;
     color: #ffffff;
+}
+
+.btn_clear {
+    font-size: x-small;
+    padding: 7px;
 }
 
 .btn_gridSize:hover, .btn_clear:hover {

@@ -60,7 +60,7 @@ function draw() {
 }
 
 
-// Default grid
+// Display default grid
 createGrid(16);
 
 // Change grid size button
