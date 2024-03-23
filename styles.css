@@ -6,7 +6,7 @@ body {
     align-items: center;
 }
 
-.btn_gridSize {
+.btn_gridSize, .btn_clear {
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 10px;
@@ -15,7 +15,7 @@ body {
     color: #ffffff;
 }
 
-.btn_gridSize:hover {
+.btn_gridSize:hover, .btn_clear:hover {
     background-color: #ffffff;
     color: #8fa3a1;
 }
@@ -28,6 +28,7 @@ body {
     border: 1px solid #8fa3a1 ;
     background-color: #8fa3a1 ;
     gap: 1px;
+    margin-bottom: 10px;
 }
 
 .row {
@@ -35,8 +36,4 @@ body {
     justify-content: space-evenly;
     background-color: #8fa3a1 ;
     gap: 1px;
-}
-
-.box {
-    background-color: white;
 }

@@ -1,7 +1,7 @@
 const grid = document.querySelector('.grid');
 const heading = document.querySelector('.heading');
 
-// Create grid
+// Create grid function
 function createGrid(gridSize) {
     
     // Display current grid size
@@ -29,6 +29,7 @@ function createGrid(gridSize) {
             box.classList.add('box');
             box.style.width = boxSizeTxt;
             box.style.height = boxSizeTxt;
+            box.style.backgroundColor = "#ffffff";
             row.appendChild(box);
         }
         grid.appendChild(row);
@@ -39,7 +40,7 @@ function createGrid(gridSize) {
 
 }
 
-// Delete grid
+// Delete grid function
 function deleteGrid() {
     let child = grid.lastElementChild;
     while (child) {
@@ -48,7 +49,7 @@ function deleteGrid() {
     }
 }
 
-// Draw / color grid
+// Draw / color grid function
 function draw() {
     const boxes = document.querySelectorAll('.box');
     boxes.forEach(box => {
@@ -58,13 +59,23 @@ function draw() {
     });
 }
 
+
 // Default grid
 createGrid(16);
 
-// Change grid size
+// Change grid size button
 const btn_gridSize = document.querySelector('.btn_gridSize');
 btn_gridSize.addEventListener("click", () => {
     const newGridSize = prompt("Please enter a new grid size (one number, 10-100).")
     deleteGrid();
     createGrid(newGridSize);
+});
+
+// Clear grid button
+const btn_clear = document.querySelector('.btn_clear');
+btn_clear.addEventListener("click", () => {
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+        box.style.backgroundColor = "#ffffff";
+    });
 });
