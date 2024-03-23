@@ -34,6 +34,9 @@ function createGrid(gridSize) {
         grid.appendChild(row);
     }
 
+    // Ready to draw
+    draw();
+
 }
 
 // Delete grid
@@ -45,13 +48,23 @@ function deleteGrid() {
     }
 }
 
+// Draw / color grid
+function draw() {
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+        box.addEventListener("mouseenter", () => {
+        box.style.backgroundColor = "#8fa3a1";
+        });
+    });
+}
+
 // Default grid
 createGrid(16);
 
 // Change grid size
 const btn_gridSize = document.querySelector('.btn_gridSize');
-btn_gridSize.addEventListener('click', () => {
-    let newGridSize = prompt("Please enter a new grid size (one number, 10-100).")
+btn_gridSize.addEventListener("click", () => {
+    const newGridSize = prompt("Please enter a new grid size (one number, 10-100).")
     deleteGrid();
     createGrid(newGridSize);
 });
