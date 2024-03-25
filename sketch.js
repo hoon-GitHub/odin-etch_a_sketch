@@ -4,14 +4,14 @@ const heading = document.querySelector('.heading');
 // Create grid function
 function createGrid(gridSize) {
     
-    // Display current grid size
-    heading.textContent = `Grid Size: ${gridSize} by ${gridSize}`
-
     // Check gridSize validity
-    if (gridSize < 10 || gridSize > 100) {
+    if (isNaN(gridSize) || gridSize < 10 || gridSize > 100) {
         heading.textContent = '** Cannot generate a grid - please enter a number between 10 and 100. **';
         return null;
     }
+
+    // Display current grid size
+    heading.textContent = `Grid Size: ${gridSize} by ${gridSize}`
 
     // Find proper boxSize
     let boxSize = 20; // default, 10-30
